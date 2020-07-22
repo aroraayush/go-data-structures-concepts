@@ -23,8 +23,8 @@ func main() {
 	topSpeedKmphVal := 225.0
 
 	// Calling like a constructor
-	var car1 Car = Car{gasPedal: 2234, brakePedal: 0, steeringWheel: 12561, topSpeedKmph: 225.0}
-	fmt.Println(car1) // {2234 0 12561 225}
+	var car1 Car = Car{gasPedal: 2234, brakePedal: 0, steeringWheel: 12561, topSpeedKmph: 225.0} // extra comma not required if in 1 line
+	fmt.Println(car1)                                                                            // {2234 0 12561 225}
 
 	// {2234 0 12561 225} => Type: main.Car | Value: {2234 0 12561 225} | Size: 16 bits
 	fmt.Printf("%v => Type: %T | Value: %v | Size: %d bits\n\n", car1, car1, car1, unsafe.Sizeof(car1))
@@ -40,7 +40,8 @@ func main() {
 		gasPedal:      2234,
 		brakePedal:    0,
 		steeringWheel: 12561,
-		topSpeedKmph:  225.0, // extra comma required at last
+		topSpeedKmph:  225.0, // extra comma required at last for multiline JSON
 	}
-	fmt.Println(car_formatted) // {2234 0 12561 225}
+	fmt.Println(car_formatted)          // {2234 0 12561 225}
+	fmt.Println(car_formatted.gasPedal) // 2234
 }
