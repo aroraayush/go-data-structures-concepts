@@ -53,9 +53,24 @@ func main() {
 	}
 	fmt.Println("author json: ", string(byteArray)) // author json:  {"name":"Ayush","age":25,"is_developer":true}
 
-	byteArray3, err3 := json.Marshal(book2)
+	// MarshalIndent(v, prefix,indentCount)
+	// It is like Marshal but applies Indent to format the output.
+	// Each JSON element in the output will begin on a new line beginning
+	// with prefix followed by one or more copies of indent according
+	// to the indentation nesting.
+	byteArray3, err3 := json.MarshalIndent(book2, "", "  ")
 	if err3 != nil {
 		fmt.Println("err while json marshalling: ", err3)
 	}
-	fmt.Println("book2 json: ", string(byteArray3)) // book2 json:  {"title":"Harry Potter","author":{"name":"Ayush","age":25,"is_developer":true}}
+	fmt.Println("book2 json indented: \n", string(byteArray3))
+	// book2 json indented:
+	// {
+	// "title": "Harry Potter",
+	// "author": {
+	// 		"name": "Ayush",
+	// 		"age": 25,
+	// 		"is_developer": true
+	// 	  }
+	// }
+
 }
