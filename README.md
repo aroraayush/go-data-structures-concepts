@@ -104,7 +104,7 @@ Do `go run <filename>` in each directory
     ```
     var x string = "Hello World" 
     ```
-- #### short declaration operator (:=)
+- #### short declaration / walrus  operator (:=)
     ```
     myvariable3 := 200
     ```
