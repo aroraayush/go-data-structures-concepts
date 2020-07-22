@@ -22,11 +22,17 @@ func (c Car) kmph() float64 { //  return type is float64
 	return float64(c.gasPedal) * (c.topSpeedKmph / USIXTEENBITMAX)
 }
 
+func (c Car) mph() float64 { //  return type is float64
+	return float64(c.gasPedal) * (c.topSpeedKmph / (USIXTEENBITMAX * KMH_MULTIPLE))
+}
+
 func main() {
 
 	// Calling like a constructor
-	car := Car{gasPedal: 2234, brakePedal: 0, steeringWheel: 12561, topSpeedKmph: 225.0}
-	fmt.Println(car) // {2234 0 12561 225}
+	car := Car{gasPedal: 65000, brakePedal: 0, steeringWheel: 12561, topSpeedKmph: 225.0}
+	fmt.Println(car, "\n") // {2234 0 12561 225}
 
-	fmt.Println(car.kmph()) // 7.669947356374457
+	fmt.Println("Current Postion", car.gasPedal)
+	fmt.Println("kmph", car.kmph()) // 7.669947356374457
+	fmt.Println("mph", car.mph())   // 7.669947356374457
 }
