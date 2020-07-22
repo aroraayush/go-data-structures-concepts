@@ -86,9 +86,8 @@ go run main.go
 ```
 <details>
 <summary>Code Formatting</summary>
-```
-go fmt
-```
+    
+    go fmt
 </details>
 
 ---
