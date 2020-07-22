@@ -1,0 +1,6 @@
+[
+    {"fname":"Ayush", "lname": "Arora","gender":"M","height":177},
+    {"fname":"Foo", "lname": "Bar","gender":"F","height":170},
+    {"fname":"Baz", "lname": "test_lname","gender":"F","height":157},
+    {"fname":"Tango", "lname": "Charlie","gender":"M","height":162}
+]

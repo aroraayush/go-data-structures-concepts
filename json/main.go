@@ -41,7 +41,7 @@ func main() {
 	// Marshal returns the JSON encoding of book1
 	byteArray, err := json.Marshal(book1)
 	if err != nil {
-		fmt.Println("err while json marshalling: ", err)
+		fmt.Println("err while json marshalling: ", err.Error())
 	}
 	fmt.Println("book1 json: ", string(byteArray)) // book1 json:  {"title":"Harry Potter","author":"J.K Rowling"}
 
@@ -49,7 +49,7 @@ func main() {
 	// Linting error : no new variables on left side of :=
 	byteArray, err2 := json.Marshal(author)
 	if err2 != nil {
-		fmt.Println("err while json marshalling: ", err2)
+		fmt.Println("err while json marshalling: ", err2.Error())
 	}
 	fmt.Println("author json: ", string(byteArray)) // author json:  {"name":"Ayush","age":25,"is_developer":true}
 
@@ -60,7 +60,7 @@ func main() {
 	// to the indentation nesting.
 	byteArray3, err3 := json.MarshalIndent(book2, "", "  ")
 	if err3 != nil {
-		fmt.Println("err while json marshalling: ", err3)
+		fmt.Println("err while json marshalling: ", err3.Error())
 	}
 	fmt.Println("book2 json indented: \n", string(byteArray3))
 	// book2 json indented:
