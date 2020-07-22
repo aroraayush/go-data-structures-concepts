@@ -1,3 +1,4 @@
+// float32 float64
 package main
 
 import "fmt"

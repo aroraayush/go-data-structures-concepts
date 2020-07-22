@@ -94,5 +94,32 @@ go run main.go
 Do `go run <filename>` in each directory
 
 ---
-> Primitives
--
+## Primitives
+- #### var
+    ```
+    var x string
+    x = "Hello World"  // x is assigned the string "Hello World”
+    ```
+    OR
+    ```
+    var x string = "Hello World" 
+    ```
+- #### short declaration operator (:=)
+    ```
+    myvariable3 := 200
+    ```
+- #### const
+    - Constants `cannot` be declared using the `:=` syntax.
+    - Constants can be character, string, boolean, or numeric values.
+    ```
+    const Pi = 3.14
+    ```
+
+- #### `var` vs `short`  declaration operator `(:=)`
+    
+    -   `var` - used to declare and initialize the variables `inside` and `outside` the functions. (`global` or `local level scope`)
+
+    - `:=`  &nbsp; is used to declare and initialize the variables `only inside` the functions.
+        
+        - Declaration and initialization at the same time.
+
