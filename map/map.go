@@ -1,6 +1,14 @@
 // Golang Maps is a collection of unordered pairs of key-value
 // - Keys are reference to a hash table
 // - Due to its reference type it is inexpensive to pass, for example, for a 64-bit machine it takes 8 bytes and for a 32-bit machine, it takes 4 bytes.
+// - The map is also known as a hash map, hash table, unordered map, dictionary, or associative array.
+
+// Syntax
+// map[Key_Type]Value_Type{}
+// var mymap map[int]string
+
+// map[Key_Type]Value_Type{key1: value1, ..., keyN: valueN}
+// var mymap map[int]string{1:"a",2:"b"}
 
 
 package main
@@ -10,5 +18,28 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello, world.")
+     var map_1 map[int]int
+  
+    // Checking if the map is nil or not 
+    if map_1 == nil {   // True
+      
+        fmt.Println("True") 
+    } else { 
+      
+        fmt.Println("False") 
+    } 
+  
+    // Creating and initializing a map 
+    // Using shorthand declaration and 
+    // using map literals 
+    map_2 := map[int]string{ 
+      
+            90: "Dog", 
+            91: "Cat", 
+            92: "Cow", 
+            93: "Bird", 
+            94: "Rabbit", 
+    } 
+      
+    fmt.Println("Map-2: ", map_2) // Map-2:  map[90:Dog 91:Cat 92:Cow 93:Bird 94:Rabbit]
 }
