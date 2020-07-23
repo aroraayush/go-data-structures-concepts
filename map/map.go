@@ -74,4 +74,25 @@ func main() {
 	// Deleting keys 
 	// Using delete function 
 	delete(m_a_p, 90)
+	
+	// Comparing Maps in Golang
+	map_3 := map[int]string{ 
+
+		200: "Anita", 
+		201: "Neha", 
+		203: "Suman", 
+		204: "Robin", 
+		205: "Rohit", 
+	} 
+	map_4 := map[int]string{ 
+
+		200: "Anita", 
+		201: "Neha", 
+		203: "Suman", 
+		204: "Robin", 
+		205: "Rohit", 
+		206: "Sumit", 
+	}
+	res1 := reflect.DeepEqual(map_3, map_4)
+	fmt.Println("Is Map 3 is equal to Map 4: ", res1) // false
 }
