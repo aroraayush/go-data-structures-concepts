@@ -1,4 +1,10 @@
 Focus on Python over Golang
+```
+brew install dep
+dep init
+```
+- `Gopkg.toml` like pakage.json will be generated
+- dep puts dependencies into the vendor folder
 
 <details>
 <summary>GOPATH vs GOROOT</summary>
@@ -7,7 +13,7 @@ Installing Golang via Homebrew automatically generates two directories critical 
 - `GOROOT` ( /usr/local/go ): 
     
     The Go "root" directory contains <ins> **Go's source code**</ins>. Homebrew will automatically register this path for you; there's little reason to mess around in here unless you're a Go contributor or if you're attempting to run multiple versions of Go.
-- `GOPATH` ( /Users/toddbirchard/go ): 
+- `GOPATH` ( /Users/ayush/go ): 
     
     Unlike most programming languages, Go takes an opinionated stance that <ins> **all projects** </ins>  and dependencies of the language <ins> **should exist in a single directory known as the GOPATH**</ins> . Any time we develop a Go project or install a third-party module, the actions taken ultimately happen inside this directory
     
@@ -94,6 +100,9 @@ go run main.go
 Do `go run <filename>` in each directory
 
 ---
+## nil reference
+- golang uses `nil` instead of `null` or `None`
+
 ## Primitives
 - #### var
     ```
