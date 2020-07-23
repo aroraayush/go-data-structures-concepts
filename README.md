@@ -137,3 +137,15 @@ Do `go run <filename>` in each directory
         
         - Declaration and initialization at the same time.
 
+---
+## Looping
+
+a := []string{"Foo", "Bar"}
+for idx, str := range a {
+    fmt.Println(idx, str)
+}
+
+```
+0 Foo
+1 Bar
+```
