@@ -18,6 +18,14 @@ import (
 )
 
 func main() {
+
+	// Creating a map using make() function 
+	var My_map = make(map[float64]string)  // map[]
+	My_map[1.3] = "Rohit"
+	My_map[1.5] = "Sumit"
+	fmt.Println(My_map) // map[1.3:Rohit 1.5:Sumit]
+	
+	
 	var map_1 map[int]int
 
 	// Checking if the map is nil or not 
@@ -63,15 +71,7 @@ func main() {
 	_, ok1 := map_2[92] 
 	fmt.Println("\nKey present or not:", ok1) 
 	
-	// Creating a map using make() function 
-	var My_map = make(map[float64]string)  // map[]
-	My_map[1.3] = "Rohit"
-	My_map[1.5] = "Sumit"
-	fmt.Println(My_map) // map[1.3:Rohit 1.5:Sumit]
-	
-	
-	
-	
-	
-	
+	// Deleting keys 
+	// Using delete function 
+	delete(m_a_p, 90)
 }
