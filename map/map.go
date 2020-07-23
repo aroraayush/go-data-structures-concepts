@@ -53,6 +53,16 @@ func main() {
 	// 93 Bird
 	// 94 Rabbit
 	
+	// Checking the key is available 
+	// or not in the map_2 map 
+	pet_name, ok := map_2[90] 
+	fmt.Println("\nKey present or not:", ok) 
+	fmt.Println("Value:", pet_name) 
+
+	// Using blank identifier 
+	_, ok1 := map_2[92] 
+	fmt.Println("\nKey present or not:", ok1) 
+	
 	// Creating a map using make() function 
 	var My_map = make(map[float64]string)  // map[]
 	My_map[1.3] = "Rohit"
