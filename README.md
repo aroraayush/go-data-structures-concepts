@@ -1,10 +1,15 @@
 Focus on Python over Golang
 ```
+ nodemon --watch './*.go' --signal SIGTERM --exec 'go' run server.go 
+```
+- Vendor directory
+```
 brew install dep
-dep init
+dep init # in src/main
 ```
 - `Gopkg.toml` like pakage.json will be generated
 - dep puts dependencies into the vendor folder
+
 
 <details>
 <summary>GOPATH vs GOROOT</summary>

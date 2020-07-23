@@ -13,12 +13,10 @@ const path string = "/hello"
 func main() {
 
 	http.HandleFunc(path, func(writer http.ResponseWriter, request *http.Request) {
-		writer.Write([]byte("<html><body><center><h1>Hello World</h1></center></body></html>"))
-	})
-
+	//
 	portString := fmt.Sprintf(":%d", port)
 
-	fmt.Printf("Starting server at port %d listening at path %s", port, path)
+	fmt.Printf("Starting server at port %d listening at path %s\n", port, path)
 
 	err := http.ListenAndServe(portString, nil)
 
