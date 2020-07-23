@@ -140,6 +140,8 @@ Do `go run <filename>` in each directory
 ---
 ## Looping
 
+### Enhanced for loop
+
 a := []string{"Foo", "Bar"}
 for idx, str := range a {
     fmt.Println(idx, str)
@@ -152,3 +154,12 @@ for idx, str := range a {
 - The range expression, a, is evaluated once before beginning the loop.
 - The iteration values are assigned to the respective iteration variables, i and s, as in an assignment statement.
 - The second iteration variable is optional.
+
+### Iterating each character of string
+const s = "日本語"
+for i := 0; i < len(s); i++ {
+    fmt.Printf("%x ", s[i])
+}
+```
+e6 97 a5 e6 9c ac e8 aa 9e
+```
