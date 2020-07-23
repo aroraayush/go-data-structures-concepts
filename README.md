@@ -149,3 +149,6 @@ for idx, str := range a {
 0 Foo
 1 Bar
 ```
+- The range expression, a, is evaluated once before beginning the loop.
+- The iteration values are assigned to the respective iteration variables, i and s, as in an assignment statement.
+- The second iteration variable is optional.
