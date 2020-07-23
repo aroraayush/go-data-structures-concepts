@@ -18,28 +18,50 @@ import (
 )
 
 func main() {
-     var map_1 map[int]int
-  
-    // Checking if the map is nil or not 
-    if map_1 == nil {   // True
-      
-        fmt.Println("True") 
-    } else { 
-      
-        fmt.Println("False") 
-    } 
-  
-    // Creating and initializing a map 
-    // Using shorthand declaration and 
-    // using map literals 
-    map_2 := map[int]string{ 
-      
-            90: "Dog", 
-            91: "Cat", 
-            92: "Cow", 
-            93: "Bird", 
-            94: "Rabbit", 
-    } 
-      
-    fmt.Println("Map-2: ", map_2) // Map-2:  map[90:Dog 91:Cat 92:Cow 93:Bird 94:Rabbit]
+	var map_1 map[int]int
+
+	// Checking if the map is nil or not 
+	if map_1 == nil {   // True
+
+	fmt.Println("True") 
+	} else { 
+
+	fmt.Println("False") 
+	} 
+
+	// Creating and initializing a map 
+	// Using shorthand declaration and 
+	// using map literals 
+	map_2 := map[int]string{ 
+
+	    90: "Dog", 
+	    91: "Cat", 
+	    92: "Cow", 
+	    93: "Bird", 
+	    94: "Rabbit", 
+	} 
+
+	fmt.Println("Map-2: ", map_2) // Map-2:  map[90:Dog 91:Cat 92:Cow 93:Bird 94:Rabbit]
+	
+	// Iterating map using for rang loop 
+	for id, pet := range map_2 { 
+		fmt.Println(id, pet) 
+	} 
+	// 90 Dog
+	// 91 Cat
+	// 92 Cow
+	// 93 Bird
+	// 94 Rabbit
+	
+	// Creating a map using make() function 
+	var My_map = make(map[float64]string)  // map[]
+	My_map[1.3] = "Rohit"
+	My_map[1.5] = "Sumit"
+	fmt.Println(My_map) // map[1.3:Rohit 1.5:Sumit]
+	
+	
+	
+	
+	
+	
 }
